@@ -1,8 +1,106 @@
 @import "tailwindcss";
 
-/* =========================
+/** 
+  DEFINIENDO COLORES BASE Y OTROS ESTILOS
+*/
+@theme {
+  /* ===== COLORS ===== */
+  --color-surface-container-high: #ebe7e9;
+  --color-secondary: #5f5e5e;
+  --color-surface-variant: #e5e1e3;
+  --color-surface: #fcf8fa;
+  --color-on-primary: #ffffff;
+  --color-on-secondary-fixed-variant: #474646;
+  --color-tertiary-container: #c5eed9;
+  --color-on-error: #ffffff;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-surface: #1c1b1d;
+  --color-surface-container-lowest: #ffffff;
+  --color-inverse-surface: #313032;
+  --color-inverse-on-surface: #f4f0f2;
+  --color-on-surface-variant: #47464d;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-highest: #e5e1e3;
+  --color-on-primary-container: #66647c;
+  --color-secondary-fixed: #e5e2e1;
+  --color-surface-bright: #fcf8fa;
+  --color-on-secondary-container: #656464;
+  --color-on-primary-fixed: #1a192e;
+  --color-surface-container-low: #f7f2f5;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary-fixed: #002115;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-error: #ba1a1a;
+  --color-primary: #5e5c74;
+  --color-secondary-container: #e5e2e1;
+  --color-on-primary-fixed-variant: #46445b;
+  --color-on-tertiary-fixed-variant: #294e3f;
+  --color-on-background: #1c1b1d;
+  --color-tertiary: #416656;
+  --color-inverse-primary: #c7c3df;
+  --color-background: #fcf8fa;
+  --color-on-error-container: #93000a;
+  --color-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #a8cfbc;
+  --color-on-tertiary-container: #496d5d;
+  --color-outline-variant: #c8c5cd;
+  --color-primary-container: #e6e2ff;
+  --color-outline: #78767d;
+  --color-surface-dim: #ddd9db;
+  --color-primary-fixed-dim: #c7c3df;
+  --color-surface-container: #f1edef;
+  --color-surface-tint: #5e5c74;
+  --color-primary-fixed: #e3dffc;
+  --color-tertiary-fixed: #c3ecd7;
+
+  /* ===== SPACING ===== */
+  --spacing-stack-sm: 0.5rem;
+  --spacing-stack-md: 1.5rem;
+  --spacing-stack-lg: 3rem;
+  --spacing-gutter: 2rem;
+  --spacing-section-padding: 8rem;
+  --spacing-container-max: 1200px;
+
+  /* ===== FONTS ===== */
+  --font-display-lg: "Playfair Display", serif;
+  --font-headline-md: "Playfair Display", serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-display-lg-mobile: "Playfair Display", serif;
+  --font-label-sm: "Inter", sans-serif;
+
+  /* ===== FONT SIZES ===== */
+  --text-display-lg: 64px;
+  --text-display-lg--line-height: 1.1;
+  --text-display-lg--letter-spacing: -0.02em;
+
+  --text-display-lg-mobile: 40px;
+  --text-display-lg-mobile--line-height: 1.2;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.3;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.6;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+
+  --text-label-sm: 12px;
+  --text-label-sm--line-height: 1;
+  --text-label-sm--letter-spacing: 0.05em;
+
+  /* ===== BORDER RADIUS ===== */
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+/* 
    BASE STYLES
-========================= */
+ */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -15,9 +113,9 @@
   }
 }
 
-/* =========================
+/* 
    COMPONENTS
-========================= */
+ */
 @layer components {
   .glass-card {
     background: rgba(255, 255, 255, 0.65);
@@ -40,9 +138,9 @@
   }
 }
 
-/* =========================
+/* 
    UTILITIES
-========================= */
+ */
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
