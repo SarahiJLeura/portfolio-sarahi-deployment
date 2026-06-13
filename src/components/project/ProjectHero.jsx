@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom'
 import TechBadge from '../common/TechBadge'
 
 const ProjectHero = ({ project }) => {
+  const allTech = Object.values(project.stack)
+  .flat()
+  .map(t => t.name)
   return (
     <section className="px-6 md:px-gutter max-w-container-max mx-auto py-12">
       <div className="flex flex-col gap-6">
@@ -14,18 +17,20 @@ const ProjectHero = ({ project }) => {
             {project.title}
           </h1>
           <div className="flex flex-wrap gap-2 mt-2">
-            {project.tech.map((tech, index) => (
+            {allTech.map((tech, index) => (
               <TechBadge key={index}>{tech}</TechBadge>
             ))}
           </div>
         </div>
         <p className="text-body-lg text-on-surface-variant max-w-2xl mt-4">
-          {project.description}
+          {project.longDescription}
         </p>
         <div className="flex gap-4 mt-4">
           <a 
             className="bg-on-surface text-on-primary px-8 py-4 rounded-full font-label-sm flex items-center gap-2 hover:shadow-lg transition-all group" 
-            href="#"
+            href={project.repository}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <span className="material-symbols-outlined">code</span>
             💻 Repositorio

@@ -1,83 +1,368 @@
+import { images } from '../assets/images';
+
 export const projects = [
   {
     id: 1,
-    title: "Luminal Finance",
-    description: "Plataforma SaaS de gestión financiera con dashboards interactivos y análisis en tiempo real.",
-    longDescription: "Una solución empresarial sofisticada diseñada para la gestión de activos en tiempo real, combinando una arquitectura robusta con una interfaz de usuario intuitiva y fluida.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
-    ],
-    tech: ["React", "TypeScript", "Tailwind", "Node.js"],
-    category: "SaaS",
+    title: "GymControl",
+    description:
+      "Sistema para gestión de gimnasios con control de membresías, inventario y operaciones en tiempo real.",
+
+    longDescription:
+      "Plataforma empresarial diseñada para la administración integral de gimnasios, incluyendo gestión de usuarios, control de membresías, inventario y seguimiento operativo en tiempo real. Elaborada en equipo como proyecto final de clase.",
+
+    image: images.gym.cover,
+    gallery: images.gym.gallery,
+
+    youtubeId: "4EmDJJdjsPE",
+    category: "ERP / gym management",
+    repository: "https://github.com/christian10-M/GymControl",
+
     featured: true,
-    colSpan: "md:col-span-8",
-    aspect: "aspect-[16/9]"
+    colSpan: "md:col-span-6",
+    aspect: "aspect-[3/2]",
+
+    stack: {
+      frontend: [
+        {
+          name: "Blade",
+          description: "Motor de plantillas de Laravel"
+        },
+        {
+          name: "Livewire",
+          description: "Componentes reactivos sin JS complejo"
+        },
+        {
+          name: "Tailwind CSS",
+          description: "UI utility-first"
+        }
+      ],
+
+      backend: [
+        {
+          name: "Laravel 11",
+          description: "Framework principal del sistema"
+        }
+      ],
+
+      database: [
+        {
+          name: "MySQL",
+          description: "Base de datos relacional normalizada"
+        }
+      ],
+
+      tools: [
+        {
+          name: "Git",
+          description: "Control de versiones"
+        }
+      ]
+    },
+
+    architecture: [
+      {
+        type: "frontend",
+        title: "Frontend",
+        description: "UI reactiva con componentes reutilizables"
+      },
+      {
+        type: "backend",
+        title: "Backend",
+        description: "Lógica de negocio y API con Laravel"
+      },
+      {
+        type: "integration",
+        title: "Integración",
+        description: "Comunicación en tiempo real con Livewire"
+      }
+    ],
+
+    modules: [
+      "Gestión de membresías",
+      "Inventario",
+      "Control de acceso",
+      "Reportes en tiempo real",
+      "Máquinas",
+      "Rutinas",
+      "Músculos",
+      "Ejercicios",
+      "Usuarios"
+    ]
   },
   {
     id: 2,
-    title: "Aura Boutique",
-    description: "E-commerce premium para joyería de lujo con experiencia de compra inmersiva.",
-    longDescription: "Tienda online de alta gama con integración de Shopify y experiencia de usuario optimizada para conversión.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=1000&fit=crop",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&h=600&fit=crop"
-    ],
-    tech: ["Next.js", "Shopify", "Tailwind"],
-    category: "E-commerce",
+
+    title: "Hotel Reservation System",
+
+    description:
+      "Sistema web para la gestión de reservas hoteleras, disponibilidad de habitaciones, administración de clientes y control de ocupación.",
+
+    longDescription:
+      "Plataforma web desarrollada para optimizar la administración de hoteles mediante la gestión de habitaciones, reservas y clientes. Permite consultar disponibilidad en tiempo real, realizar y modificar reservas, enviar notificaciones automáticas y generar reportes de ocupación. Incluye módulos para usuarios, administradores y gestión integral de la operación hotelera.",
+
+    image: images.hotel.cover,
+    gallery: images.hotel.gallery,
+
+    youtubeId: "",
+    category: "Hotel Management System",
+
+    repository:
+      "https://github.com/SarahiJLeura/Hotel-Reservation-System-HTML",
+
     featured: true,
-    colSpan: "md:col-span-4",
-    aspect: "aspect-[4/5]"
+    colSpan: "md:col-span-6",
+    aspect: "aspect-[3/2]",
+
+    stack: {
+      frontend: [
+        {
+          name: "HTML5",
+          description: "Estructura y contenido de la plataforma web"
+        },
+        {
+          name: "CSS3",
+          description: "Diseño responsivo y estilos visuales"
+        },
+        {
+          name: "JavaScript",
+          description: "Interactividad y validaciones del cliente"
+        }
+      ],
+
+      backend: [
+        {
+          name: "PHP",
+          description: "Lógica de negocio y gestión de reservas"
+        }
+      ],
+
+      database: [
+        {
+          name: "MySQL",
+          description: "Almacenamiento de usuarios, habitaciones y reservas"
+        }
+      ],
+
+      tools: [
+        {
+          name: "Git",
+          description: "Control de versiones del proyecto"
+        }
+      ]
+    },
+
+    architecture: [
+      {
+        type: "frontend",
+        title: "Frontend",
+        description:
+          "Interfaz web responsiva para clientes y administradores"
+      },
+      {
+        type: "backend",
+        title: "Backend",
+        description:
+          "Gestión de reservas, habitaciones, usuarios y notificaciones"
+      },
+      {
+        type: "database",
+        title: "Base de Datos",
+        description:
+          "Almacenamiento centralizado de clientes, habitaciones y reservas"
+      }
+    ],
+
+    modules: [
+      "Consulta de disponibilidad",
+      "Registro de usuarios",
+      "Inicio de sesión",
+      "Reserva de habitaciones",
+      "Modificación de reservas",
+      "Cancelación de reservas",
+      "Gestión de habitaciones",
+      "Gestión de clientes",
+      "Mensajería con el hotel",
+      "Notificaciones de reserva",
+      "Recordatorios automáticos",
+      "Visualización de reservas",
+      "Reportes de ocupación",
+      "Administración del sistema"
+    ]
   },
   {
     id: 3,
-    title: "Nexus Analytics",
-    description: "Plataforma de visualización de datos con dashboards interactivos y reportes personalizados.",
-    longDescription: "Sistema de análisis de datos empresarial con visualizaciones avanzadas y capacidades predictivas.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
-    ],
-    tech: ["D3.js", "Node.js", "Express", "MongoDB"],
-    category: "Analytics",
+    title: "School management system",
+    description:
+      "Sistema para gestión de gimnasios con control de membresías, inventario y operaciones en tiempo real.",
+
+    longDescription:
+      "Plataforma empresarial diseñada para la administración integral de gimnasios, incluyendo gestión de usuarios, control de membresías, inventario y seguimiento operativo en tiempo real. Elaborada en equipo.",
+
+    image: images.gym.cover,
+    gallery: images.gym.gallery,
+
+    youtubeId: "fnaHWV5M-4s",
+    category: "ERP / gym management",
+    repository: "https://github.com/christian10-M/GymControl",
+
     featured: true,
     colSpan: "md:col-span-6",
-    aspect: "aspect-[3/2]"
+    aspect: "aspect-[3/2]",
+
+    stack: {
+      frontend: [
+        {
+          name: "Blade",
+          description: "Motor de plantillas de Laravel"
+        },
+        {
+          name: "Livewire",
+          description: "Componentes reactivos sin JS complejo"
+        },
+        {
+          name: "Tailwind CSS",
+          description: "UI utility-first"
+        }
+      ],
+
+      backend: [
+        {
+          name: "Laravel 11",
+          description: "Framework principal del sistema"
+        }
+      ],
+
+      database: [
+        {
+          name: "MySQL",
+          description: "Base de datos relacional normalizada"
+        }
+      ],
+
+      tools: [
+        {
+          name: "Git",
+          description: "Control de versiones"
+        }
+      ]
+    },
+
+    architecture: [
+      {
+        type: "frontend",
+        title: "Frontend",
+        description: "UI reactiva con componentes reutilizables"
+      },
+      {
+        type: "backend",
+        title: "Backend",
+        description: "Lógica de negocio y API con Laravel"
+      },
+      {
+        type: "integration",
+        title: "Integración",
+        description: "Comunicación en tiempo real con Livewire"
+      }
+    ],
+
+    modules: [
+      "Gestión de membresías",
+      "Inventario",
+      "Control de acceso",
+      "Reportes en tiempo real",
+      "Máquinas",
+      "Rutinas",
+      "Músculos",
+      "Ejercicios",
+      "Usuarios"
+    ]
   },
   {
     id: 4,
-    title: "Vesper Portfolio",
-    description: "Template portfolio interactivo con animaciones fluidas y diseño editorial.",
-    longDescription: "Portafolio digital con animaciones avanzadas y experiencias inmersivas para creativos.",
-    image: "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&h=600&fit=crop",
-      "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=800&h=600&fit=crop"
-    ],
-    tech: ["Framer Motion", "GSAP", "React"],
-    category: "Template",
+    title: "Example project",
+    description:
+      "Sistema para gestión de gimnasios con control de membresías, inventario y operaciones en tiempo real.",
+
+    longDescription:
+      "Plataforma empresarial diseñada para la administración integral de gimnasios, incluyendo gestión de usuarios, control de membresías, inventario y seguimiento operativo en tiempo real. Elaborada en equipo.",
+
+    image: images.gym.cover,
+    gallery: images.gym.gallery,
+
+    youtubeId: "fnaHWV5M-4s",
+    category: "ERP / gym management",
+    repository: "https://github.com/christian10-M/GymControl",
+
     featured: true,
     colSpan: "md:col-span-6",
-    aspect: "aspect-[3/2]"
+    aspect: "aspect-[3/2]",
+
+    stack: {
+      frontend: [
+        {
+          name: "Blade",
+          description: "Motor de plantillas de Laravel"
+        },
+        {
+          name: "Livewire",
+          description: "Componentes reactivos sin JS complejo"
+        },
+        {
+          name: "Tailwind CSS",
+          description: "UI utility-first"
+        }
+      ],
+
+      backend: [
+        {
+          name: "Laravel 11",
+          description: "Framework principal del sistema"
+        }
+      ],
+
+      database: [
+        {
+          name: "MySQL",
+          description: "Base de datos relacional normalizada"
+        }
+      ],
+
+      tools: [
+        {
+          name: "Git",
+          description: "Control de versiones"
+        }
+      ]
+    },
+
+    architecture: [
+      {
+        type: "frontend",
+        title: "Frontend",
+        description: "UI reactiva con componentes reutilizables"
+      },
+      {
+        type: "backend",
+        title: "Backend",
+        description: "Lógica de negocio y API con Laravel"
+      },
+      {
+        type: "integration",
+        title: "Integración",
+        description: "Comunicación en tiempo real con Livewire"
+      }
+    ],
+
+    modules: [
+      "Gestión de membresías",
+      "Inventario",
+      "Control de acceso",
+      "Reportes en tiempo real",
+      "Máquinas",
+      "Rutinas",
+      "Músculos",
+      "Ejercicios",
+      "Usuarios"
+    ]
   }
 ]
-
-export const projectDetail = {
-  id: 1,
-  title: "Sistema de Inventario",
-  tech: ["Laravel 11", "Livewire", "MySQL", "Tailwind"],
-  description: "Una solución empresarial sofisticada diseñada para la gestión de activos en tiempo real, combinando una arquitectura robusta con una interfaz de usuario intuitiva y fluida.",
-  longDescription: "Diseñado bajo el patrón de arquitectura de micro-interacciones, el sistema utiliza Laravel 11 como núcleo reactivo. La implementación de Livewire permite una experiencia Single Page Application (SPA) sin la complejidad del JavaScript tradicional.",
-  images: [
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=800&fit=crop",
-    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop"
-  ],
-  videoImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1920&h=1080&fit=crop"
-}

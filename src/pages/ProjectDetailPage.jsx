@@ -7,10 +7,14 @@ import ProjectHero from '../components/project/ProjectHero'
 import ProjectGallery from '../components/project/ProjectGallery'
 import ProjectVideo from '../components/project/ProjectVideo'
 import ProjectArchitecture from '../components/project/ProjectArchitecture'
-import { projectDetail } from '../data/projects'
+import ProjectStack from '../components/project/ProjectStack'
+import { projects } from '../data/projects'
 
 const ProjectDetailPage = () => {
-  //const { id } = useParams()
+  const { id } = useParams()
+
+  // 🔎 buscar proyecto según el id de la URL
+  const project = projects.find(p => p.id === Number(id))
 
   useEffect(() => {
     const observerOptions = {
@@ -27,22 +31,46 @@ const ProjectDetailPage = () => {
     }, observerOptions)
 
     document.querySelectorAll('section').forEach(section => {
-      section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8')
+      section.classList.add(
+        'transition-all',
+        'duration-1000',
+        'opacity-0',
+        'translate-y-8'
+      )
       observer.observe(section)
     })
 
     return () => observer.disconnect()
   }, [])
 
+  // ⚠️ fallback si no existe el proyecto
+  if (!project) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-on-surface">
+        Proyecto no encontrado
+      </div>
+    )
+  }
+
   return (
     <>
       <Header />
+
       <main className="pt-24 pb-12">
-        <ProjectHero project={projectDetail} />
-        <ProjectGallery images={projectDetail.images} />
-        <ProjectVideo videoImage={projectDetail.videoImage} />
-        <ProjectArchitecture />
+        <ProjectHero project={project} />
+
+        <ProjectGallery images={project.gallery} />
+
+        <ProjectVideo videoImage={project.image} youtubeId={project.youtubeId} />
+
+        <ProjectArchitecture
+          architecture={project.architecture}
+          description={project.longDescription}
+        />
+
+        <ProjectStack stack={project.stack} />
       </main>
+
       <Footer />
       <MobileNav />
     </>

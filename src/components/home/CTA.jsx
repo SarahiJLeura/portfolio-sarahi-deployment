@@ -12,9 +12,9 @@ const CTA = () => {
         <div className="pt-8">
           <a 
             className="group relative inline-flex items-center gap-4 text-headline-md font-display-lg text-primary" 
-            href="mailto:sarahi@dev.com"
+            href="mailto:patriciajimenezleu@gmail.com"
           >
-            sarahi@dev.com
+            patriciajimenezleu@gmail.com
             <span className="block h-px w-20 bg-primary group-hover:w-32 transition-all duration-500"></span>
           </a>
         </div>
